@@ -34,7 +34,7 @@ public class Main {
         // 查看用户邮件列表
         MessageCollectionPage iMessageCollectionPage = graphClient.users(user.userPrincipalName).messages().buildRequest().select("sender,subject").get();
         List<Message> messageList = iMessageCollectionPage.getCurrentPage();
-        System.out.printf("运行时间：%s —— 共有%d封件邮件%n", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), messageList.size());
+        System.out.printf("Current Time：%s has %d mails %n", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), messageList.size());
     }
 
 }
