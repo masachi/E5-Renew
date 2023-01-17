@@ -4,8 +4,9 @@
 name: E5-Renew
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 0/6 15 1/2 ?'
+    - cron: '0 0 15 * ?'
   release:
     types: [published]
   watch:
